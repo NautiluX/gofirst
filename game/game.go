@@ -56,6 +56,13 @@ func (g *Game) Update() error {
 		}
 	}
 
+	// next card when screen is touched
+	touchIds := []ebiten.TouchID{}
+	inpututil.AppendJustReleasedTouchIDs(touchIds)
+	if len(touchIds) > 0 {
+		g.SelectCard()
+	}
+
 	// next card when screen is tapped/clicked
 	if inpututil.IsMouseButtonJustPressed(ebiten.MouseButtonLeft) {
 		g.SelectCard()
