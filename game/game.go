@@ -139,11 +139,11 @@ func (g *Game) drawCard(image *ebiten.Image, card Rule) {
 	contentX := 10
 
 	textColor := color.RGBA{30, 20, 10, 255}
-	util.DrawWrappedText(image, card.Title, contentX, 10, int(cardWidth), 10, textColor)
+	util.DrawWrappedText(image, card.Title, contentX, 0, int(cardWidth), 40, 10, textColor)
 
 	// Image Square (Centered inside card)
 	imgX := +(cardWidth - ImageWidth) / 2
-	imgY := float32(30)
+	imgY := float32(40)
 	vector.FillRect(image, imgX, imgY, ImageWidth, ImageHeight, color.RGBA{220, 210, 190, 255}, false)
 
 	if card.HasImage() {
@@ -153,8 +153,8 @@ func (g *Game) drawCard(image *ebiten.Image, card Rule) {
 	}
 	vector.StrokeRect(image, imgX, imgY, ImageWidth, ImageHeight, 1, color.RGBA{100, 90, 80, 255}, false)
 
-	ruleDescY := imgY + ImageHeight + 15
-	util.DrawWrappedText(image, card.Description, contentX, int(ruleDescY), int(cardWidth), 10, textColor)
+	ruleDescY := imgY + ImageHeight
+	util.DrawWrappedText(image, card.Description, contentX, int(ruleDescY), int(cardWidth), int(cardHeight-ruleDescY), 10, textColor)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {

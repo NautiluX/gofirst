@@ -54,6 +54,46 @@ func GetRules() []Rule {
 			Description: "The player who most recently bought a new board game starts.",
 			ImagePath:   "assets/game_buyer.png",
 		},
+		{
+			Title:       "The Fresh Recruit",
+			Description: "The youngest player at the table starts the game.",
+			ImagePath:   "assets/fresh_recruit.png",
+		},
+		{
+			Title:       "The Ancient One",
+			Description: "The oldest player at the table starts the game.",
+			ImagePath:   "assets/ancient_one.png",
+		},
+		{
+			Title:       "The Trimmed Traveler",
+			Description: "The player who most recently visited a barber starts.",
+			ImagePath:   "assets/trimmed_traveler.png",
+		},
+		{
+			Title:       "The Hydrated Hero",
+			Description: "The player who most recently finished a glass of water starts.",
+			ImagePath:   "assets/hydrated_hero.png",
+		},
+		{
+			Title:       "The Key Master",
+			Description: "The player with the most physical keys on them starts.",
+			ImagePath:   "assets/key_master.png",
+		},
+		{
+			Title:       "The Screen Addict",
+			Description: "The player with the lowest phone battery percentage starts.",
+			ImagePath:   "assets/screen_addict.png",
+		},
+		{
+			Title:       "The Pet Parent",
+			Description: "The player who last showed a photo of their pet starts.",
+			ImagePath:   "assets/pet_parent.png",
+		},
+		{
+			Title:       "The Ink Bearer",
+			Description: "The player with the newest (or only) tattoo starts.",
+			ImagePath:   "assets/ink_bearer.png",
+		},
 	}
 }
 
