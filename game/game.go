@@ -58,7 +58,7 @@ func (g *Game) Update() error {
 
 	// next card when screen is touched
 	touchIds := []ebiten.TouchID{}
-	inpututil.AppendJustReleasedTouchIDs(touchIds)
+	touchIds = inpututil.AppendJustReleasedTouchIDs(touchIds)
 	if len(touchIds) > 0 {
 		g.SelectCard()
 	}
